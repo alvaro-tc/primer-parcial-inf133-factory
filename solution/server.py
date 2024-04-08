@@ -200,10 +200,13 @@ class OrdenDataHandler(BaseHTTPRequestHandler):
             HTTPDataHandler.handle_response(self,404,{"error":"Ruta no existente"})
             
 def run(server_class=HTTPServer, handler_class =OrdenDataHandler,port =8000):
-    server_address=("",port)
-    httpd = server_class(server_address, handler_class)
-    print("Iniciando server web")
-    httpd.serve_forever()
+    try:
+        server_address=("",port)
+        httpd = server_class(server_address, handler_class)
+        print("Iniciando server web en http://localhost:8000")
+        httpd.serve_forever()
+    except KeyboardInterrupt:
+        print("Apagando Servidor Web")
     
 if __name__=="__main__":
     run()

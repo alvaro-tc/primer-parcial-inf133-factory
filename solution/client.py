@@ -39,7 +39,7 @@ data2 ={
     "status":"En Proceso",
     "payment":"Tarjeta de Credito",
     "shipping": 10.0,
-    "products": ["Camiseta"],
+    "products": ["Camiseta","Pantalon","Zapatos"],
     "order_type":"Fisica"
 }
 
